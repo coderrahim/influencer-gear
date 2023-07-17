@@ -72,3 +72,17 @@ section{
 .bannger-image img {
     width: 500px;
 }
+
+/*  Brand Section */
+.brand-container{
+    display: grid;
+    grid-template-columns: repeat(6, 6fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.brand-container img{
+    box-shadow: 0px 4px 40px rgba(128, 128, 128, 0.205);
+    padding: 10px 30px;
+    border-radius: 5px;
+}
