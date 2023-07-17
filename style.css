@@ -1,26 +1,50 @@
 /* Common CSS */
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Poppins:wght@400;600;700;800&display=swap');
+
+* {
     margin: 0 auto;
-    padding: 0;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    padding: 50px 100px;
+}
+.primary-description {
+    color: #3A3A3A;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
 }
 
+.btn-primary {
+    border-radius: 41px;
+    background: #E02C6D;
+    color: white;
+    border: 0;
+    padding: 10px 24px;
+    margin: 10px 0;
+}
 
 /* Header Navigation */
-.nav-container{
+.nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
     background-color: #ddd;
 }
-.menus ul{
+
+.menus ul {
     display: flex;
     list-style-type: none;
 }
-.menus ul li{
+
+.menus ul li {
     margin: 10px;
 }
-.menus ul li a{
+
+.menus ul li a {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
@@ -28,3 +52,23 @@
 }
 
 /* Banner Aria */
+.banner-container {
+    background-image: url("/images/Circle-design.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-container h1 {
+    color: #3A3A3A;
+    font-family: Poppins;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.bannger-image img {
+    width: 500px;
+}
