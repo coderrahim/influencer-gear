@@ -1,7 +1,7 @@
 /* Common CSS */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Poppins:wght@400;600;700;800&display=swap');
 
-* {
+*{
     margin: 0 auto;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
@@ -29,12 +29,14 @@ section {
 }
 
 /* Header Navigation */
+header{
+    background-color: #ddd;
+}
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    background-color: #ddd;
 }
 
 .menus ul {
@@ -55,24 +57,28 @@ section {
 
 /* Banner Aria */
 .banner-container {
-    background-image: url("/images/Circle-design.svg");
-    background-repeat: no-repeat;
-    background-position: bottom right;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80vh;
 }
-
-.banner-container h1 {
+.banner-content{
+    width: 50%;
+}
+.banner-content h1 {
     color: #3A3A3A;
     font-family: Poppins;
     font-size: 52px;
     font-weight: 700;
     line-height: 70px;
 }
-
-.bannger-image img {
-    width: 500px;
+.banner-image{
+    background-image: url("/images/Circle-design.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.banner-image img {
+    max-width: 100%;
 }
 
 /*  Brand Section */
@@ -83,15 +89,15 @@ section {
     justify-content: center;
     gap: 20px;
 }
-
 .brand-container img {
+    display: grid;
     box-shadow: 0px 4px 40px rgba(128, 128, 128, 0.205);
     padding: 10px 30px;
     border-radius: 5px;
 }
 
 /* Product Section */
-.produtc-container {
+.product-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
@@ -106,7 +112,7 @@ section {
 }
 
 .product img {
-    height: 300px;
+    max-width: 100%;
 }
 
 .product-title {
@@ -130,7 +136,7 @@ section {
     color: orange;
 }
 
-.product-descriptin {
+.product-description {
     color: var(--gray-50, #787885);
     font-family: Inter;
     font-size: 14px;
@@ -155,6 +161,7 @@ section {
     display: flex;
     justify-content: center; 
     align-items: center; 
+    max-width: 100%;
 }
 .blog-content{ 
     margin-left: 100px;
@@ -179,4 +186,79 @@ footer .fa-brands{
     color: #fff;
     font-size: 32px;
     margin: 16px;
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width:576px){
+    section{
+        padding: 50px 10px;
+    }
+    nav,
+    .blog-container
+    {
+        flex-direction: column;
+    }
+    .banner-content h1{
+        font-size: 40px;
+        line-height: 1.5;
+        margin-top: 30px;
+    }
+    .banner-container{
+        flex-direction: column-reverse;
+    }
+    .banner-content{
+        width: 100%;
+    }
+    .brand-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .product-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .product,
+    .brand-container,
+    .blog-content
+    {
+        margin: 20px;
+    }
+    .product img {
+        height: 200px;
+    }
+    .blog-image img,
+    .blog-content p{
+        width: 100%;
+    }
+    footer .fa-brands{
+        color: #fff;
+        font-size: 20px;
+        margin: 10px;
+    }
+}
+
+/* TABLET RESPONSIVE */
+@media screen and (min-width:577px) and (max-width:768px) {
+     
+    .brand-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .banner-content{
+        width: 100%;
+    }
+    .banner-content h1{
+        line-height: 1.3;
+    }
+    .product-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product img{
+        width: 270px;
+    }
+    .blog-image img,
+    .blog-content p{
+        width: 100%;
+    }
+    .blog-content{
+        margin: 20px;
+    }
 }
